@@ -10,10 +10,20 @@
     <li class="list-group-item">
       <div class="row">
         <div class="col-6">
-          <span class="font-weight-bold">{{ task.content }}</span> <span class="badge {% if task.status %}badge-success{% else %}badge-danger{% endif %}">{{ task.status }}</span>
+          <span class="font-weight-bold">{{ task.content }}</span>
+          {% if task.status == True %} 
+          <span class="badge badge-success">Complete</span>
+          {% else %}
+           <span class="badge badge-warning">In progress</span>
+          {% endif %}
         </div>
         <div class="col-6 text-right">
           <small>{{ task.date }} - {{ task.deadline }}</small>
+          {% if task.status == False %}
+          <a href="{% url "list:task-update" task.id %}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i>Complete</a>
+          {% else %}
+          <a href="{% url "list:task-update" task.id %}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i>Undo</a>
+          {% endif %}
         </div>
       </div>
       <div class="row mt-2">
