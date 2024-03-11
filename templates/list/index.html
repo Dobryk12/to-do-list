@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+<div class="container">
+  <h1 class="mt-5">TODO list</h1>
+  <ul class="list-group mt-3">
+    {% for task in tasks %}
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-6">
+          <span class="font-weight-bold">{{ task.content }}</span> <span class="badge {% if task.status %}badge-success{% else %}badge-danger{% endif %}">{{ task.status }}</span>
+        </div>
+        <div class="col-6 text-right">
+          <small>{{ task.date }} - {{ task.deadline }}</small>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12">
+        Tags:
+          {% for tag in  task.tags.all%}
+             {{ tag }}
+            {% endfor %}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+
