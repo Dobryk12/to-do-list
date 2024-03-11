@@ -20,9 +20,9 @@
         <div class="col-6 text-right">
           <small>{{ task.date }} - {{ task.deadline }}</small>
           {% if task.status == False %}
-          <a href="{% url "list:task-update" task.id %}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i>Complete</a>
+          <a href="{% url "list:task-update-status" task.id %}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i>Complete</a>
           {% else %}
-          <a href="{% url "list:task-update" task.id %}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i>Undo</a>
+          <a href="{% url "list:task-delete" task.id %}" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i>Undo</a>
           {% endif %}
         </div>
       </div>
@@ -30,8 +30,9 @@
         <div class="col-12">
         Tags:
           {% for tag in  task.tags.all%}
-             {{ tag }} <a href="{% url "list:tag-update"  pk=tag.id %}">Update</a> <a href="{% url "list:tag-delete"  pk=tag.id %}">Delete</a>
+              {{ tag }}
             {% endfor %}
+         <a href="{% url "list:task-update"  pk=task.id %}">Update</a> <a href="{% url "list:task-delete"  pk=task.id %}">Delete</a>
         </div>
       </div>
     </li>

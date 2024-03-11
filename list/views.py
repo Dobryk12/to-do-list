@@ -52,8 +52,13 @@ class TasksDeleteView(generic.DeleteView):
     success_url = reverse_lazy('list:index')
 
 
-class TasksUpdateView(generic.UpdateView):
+class TasksUpdateViewStatus(generic.UpdateView):
     model = Task
     form_class = TaskForm
     success_url = reverse_lazy('list:index')
+
+
+class TasksUpdateViewFull(generic.UpdateView):
+    model = Task
+    form_class = TaskFormForCreate
 

@@ -10,13 +10,21 @@ class TagForm(forms.ModelForm):
 
 
 class TaskForm(forms.ModelForm):
+    status = forms.BooleanField(
+        label="Complete?")
     class Meta:
         model = Task
         fields = ["status"]
 
 
 class TaskFormForCreate(forms.ModelForm):
-    tags = forms.ModelChoiceField(queryset=Task.objects.all())
+
     class Meta:
         model = Task
         fields = "__all__"
+
+
+# class TaskFormForUpdate(forms.ModelForm):
+#     class Meta:
+#         model = Task
+#         fields = "__all__"
