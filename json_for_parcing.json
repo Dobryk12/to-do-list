@@ -81,8 +81,8 @@
     "pk": 1,
     "fields": {
       "content": "Buy groceries",
-      "date": "2022-03-10",
-      "deadline": "2022-03-12",
+      "date": "2022-03-10T00:00:00Z",
+      "deadline": "2022-03-12T00:00:00Z",
       "status": false,
       "tags": [
         1,
@@ -95,8 +95,8 @@
     "pk": 2,
     "fields": {
       "content": "Finish homework",
-      "date": "2022-03-11",
-      "deadline": "2022-03-15",
+      "date": "2022-03-11T00:00:00Z",
+      "deadline": "2022-03-15T00:00:00Z",
       "status": false,
       "tags": [
         3
@@ -108,8 +108,8 @@
     "pk": 3,
     "fields": {
       "content": "Call mom",
-      "date": "2022-03-12",
-      "deadline": "2022-03-12",
+      "date": "2022-03-12T00:00:00Z",
+      "deadline": "2022-03-12T00:00:00Z",
       "status": false,
       "tags": [
         4
@@ -121,8 +121,8 @@
     "pk": 4,
     "fields": {
       "content": "Submit report",
-      "date": "2022-03-13",
-      "deadline": "2022-03-20",
+      "date": "2022-03-13T00:00:00Z",
+      "deadline": "2022-03-20T00:00:00Z",
       "status": false,
       "tags": [
         1,
@@ -135,8 +135,8 @@
     "pk": 5,
     "fields": {
       "content": "Go for a walk",
-      "date": "2022-03-14",
-      "deadline": "2022-03-14",
+      "date": "2022-03-14T00:00:00Z",
+      "deadline": "2022-03-14T00:00:00Z",
       "status": false,
       "tags": [
         6
@@ -148,8 +148,8 @@
     "pk": 6,
     "fields": {
       "content": "Read book",
-      "date": "2022-03-15",
-      "deadline": "2022-03-17",
+      "date": "2022-03-15T00:00:00Z",
+      "deadline": "2022-03-17T00:00:00Z",
       "status": false,
       "tags": [
         7
@@ -161,8 +161,8 @@
     "pk": 7,
     "fields": {
       "content": "Exercise",
-      "date": "2022-03-16",
-      "deadline": "2022-03-18",
+      "date": "2022-03-16T00:00:00Z",
+      "deadline": "2022-03-18T00:00:00Z",
       "status": false,
       "tags": [
         8
@@ -174,8 +174,8 @@
     "pk": 8,
     "fields": {
       "content": "Write code",
-      "date": "2022-03-17",
-      "deadline": "2022-03-25",
+      "date": "2022-03-17T00:00:00Z",
+      "deadline": "2022-03-25T00:00:00Z",
       "status": false,
       "tags": [
         9
@@ -187,8 +187,8 @@
     "pk": 9,
     "fields": {
       "content": "Practice guitar",
-      "date": "2022-03-18",
-      "deadline": "2022-03-20",
+      "date": "2022-03-18T00:00:00Z",
+      "deadline": "2022-03-20T00:00:00Z",
       "status": false,
       "tags": [
         10
@@ -200,8 +200,8 @@
     "pk": 10,
     "fields": {
       "content": "Clean room",
-      "date": "2022-03-19",
-      "deadline": "2022-03-19",
+      "date": "2022-03-19T00:00:00Z",
+      "deadline": "2022-03-19T00:00:00Z",
       "status": false,
       "tags": [
         11
@@ -209,3 +209,4 @@
     }
   }
 ]
+

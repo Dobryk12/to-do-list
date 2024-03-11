@@ -3,8 +3,8 @@ from django.db import models
 
 class Task(models.Model):
     content = models.TextField(max_length=255)
-    date = models.DateField(auto_now_add=True)
-    deadline = models.DateField(auto_now=True, blank=True, null=True)
+    date = models.DateTimeField(auto_now_add=True)
+    deadline = models.DateTimeField(blank=True, null=True)
     status = models.BooleanField(default=False)
     tags = models.ManyToManyField("Tag", related_name="tasks")
 

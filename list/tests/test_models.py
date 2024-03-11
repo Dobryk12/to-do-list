@@ -1,6 +1,6 @@
+from datetime import date
 from django.test import TestCase
 from list.models import Task, Tag
-from datetime import date
 
 
 class TaskModelTest(TestCase):

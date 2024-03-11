@@ -1,22 +1,15 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
 from django.views import generic
 
-from list.forms import TagForm, TaskForm, TaskFormForCreate
+from list.forms import TagForm, TaskForm
 from list.models import Task, Tag
 
 
-def index(request) -> HttpResponse:
-    tasks = Task.objects.all()
-    tags = Tag.objects.all()
-
-    context = {
-        'tasks': tasks,
-        'tags': tags
-    }
-
-    return render(request,"list/index.html",context)
+class TaskListView(generic.ListView):
+    model = Task
+    context_object_name = 'task_list'
 
 
 class TagListView(generic.ListView):
@@ -43,22 +36,22 @@ class TagsUpdateView(generic.UpdateView):
 
 class TasksCreateView(generic.CreateView):
     model = Task
-    form_class = TaskFormForCreate
-    success_url = reverse_lazy('list:index')
+    form_class = TaskForm
+    success_url = reverse_lazy('list:task-list')
 
 
 class TasksDeleteView(generic.DeleteView):
     model = Task
-    success_url = reverse_lazy('list:index')
+    success_url = reverse_lazy('list:task-list')
 
 
-class TasksUpdateViewStatus(generic.UpdateView):
+class TasksUpdateView(generic.UpdateView):
     model = Task
     form_class = TaskForm
-    success_url = reverse_lazy('list:index')
 
 
-class TasksUpdateViewFull(generic.UpdateView):
-    model = Task
-    form_class = TaskFormForCreate
-
+def change_task_status(request: HttpRequest, pk: int) -> HttpResponse:
+    task = get_object_or_404(Task, pk=pk)
+    task.status = not task.status
+    task.save()
+    return HttpResponseRedirect(reverse_lazy('list:task-list'))
