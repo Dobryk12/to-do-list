@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from list.forms import TagForm, TaskForm
+from list.forms import TagForm, TaskForm, TaskFormForCreate
 from list.models import Task, Tag
 
 
@@ -43,7 +43,7 @@ class TagsUpdateView(generic.UpdateView):
 
 class TasksCreateView(generic.CreateView):
     model = Task
-    form_class = TaskForm
+    form_class = TaskFormForCreate
     success_url = reverse_lazy('list:index')
 
 

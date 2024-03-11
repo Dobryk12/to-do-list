@@ -5,10 +5,6 @@
  <h1>{{ object|yesno:"Update,Create" }} Task</h1>
   <form action="" method="post">
   {% csrf_token %}
-    <label
-      for="id_name"
-      class="form-label"
-    >Complete?</label>
     {{ form|crispy }}
 
     <button type="submit" class="btn btn-primary">Submit</button>
