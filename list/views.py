@@ -24,19 +24,19 @@ class TagListView(generic.ListView):
     context_object_name = 'tag_list'
 
 
-class TagCreateView(generic.CreateView):
+class TagsCreateView(generic.CreateView):
     model = Tag
     form_class = TagForm
-    success_url = reverse_lazy('list:index')
+    success_url = reverse_lazy('list:tags-list')
 
 
-class TagDeleteView(generic.DeleteView):
+class TagsDeleteView(generic.DeleteView):
     model = Tag
-    success_url = reverse_lazy('list:index')
+    success_url = reverse_lazy('list:tags-list')
 
 
-class TagUpdateView(generic.UpdateView):
+class TagsUpdateView(generic.UpdateView):
     model = Tag
     form_class = TagForm
-    success_url = reverse_lazy('list:index')
+    success_url = reverse_lazy('list:tags-list')
 
