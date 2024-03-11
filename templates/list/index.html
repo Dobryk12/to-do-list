@@ -4,6 +4,7 @@
 {% block content %}
 <div class="container">
   <h1 class="mt-5">TODO list</h1>
+  <a href="{% url "list:task-create" %}" class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Add task</a>
   <ul class="list-group mt-3">
     {% for task in tasks %}
     <li class="list-group-item">
@@ -19,7 +20,7 @@
         <div class="col-12">
         Tags:
           {% for tag in  task.tags.all%}
-             {{ tag }}
+             {{ tag }} <a href="{% url "list:tag-update"  pk=tag.id %}">Update</a> <a href="{% url "list:tag-delete"  pk=tag.id %}">Delete</a>
             {% endfor %}
         </div>
       </div>
