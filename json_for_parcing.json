@@ -1,0 +1,211 @@
+[
+  {
+    "model": "list.tag",
+    "pk": 1,
+    "fields": {
+      "name": "Groceries"
+    }
+  },
+  {
+    "model": "list.tag",
+    "pk": 2,
+    "fields": {
+      "name": "Urgent"
+    }
+  },
+  {
+    "model": "list.tag",
+    "pk": 3,
+    "fields": {
+      "name": "School"
+    }
+  },
+  {
+    "model": "list.tag",
+    "pk": 4,
+    "fields": {
+      "name": "Family"
+    }
+  },
+  {
+    "model": "list.tag",
+    "pk": 5,
+    "fields": {
+      "name": "Work"
+    }
+  },
+  {
+    "model": "list.tag",
+    "pk": 6,
+    "fields": {
+      "name": "Health"
+    }
+  },
+  {
+    "model": "list.tag",
+    "pk": 7,
+    "fields": {
+      "name": "Exercise"
+    }
+  },
+  {
+    "model": "list.tag",
+    "pk": 8,
+    "fields": {
+      "name": "Coding"
+    }
+  },
+  {
+    "model": "list.tag",
+    "pk": 9,
+    "fields": {
+      "name": "Hobbies"
+    }
+  },
+  {
+    "model": "list.tag",
+    "pk": 10,
+    "fields": {
+      "name": "Music"
+    }
+  },
+  {
+    "model": "list.tag",
+    "pk": 11,
+    "fields": {
+      "name": "Home"
+    }
+  },
+  {
+    "model": "list.task",
+    "pk": 1,
+    "fields": {
+      "content": "Buy groceries",
+      "date": "2022-03-10",
+      "deadline": "2022-03-12",
+      "status": false,
+      "tags": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "list.task",
+    "pk": 2,
+    "fields": {
+      "content": "Finish homework",
+      "date": "2022-03-11",
+      "deadline": "2022-03-15",
+      "status": false,
+      "tags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "list.task",
+    "pk": 3,
+    "fields": {
+      "content": "Call mom",
+      "date": "2022-03-12",
+      "deadline": "2022-03-12",
+      "status": false,
+      "tags": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "list.task",
+    "pk": 4,
+    "fields": {
+      "content": "Submit report",
+      "date": "2022-03-13",
+      "deadline": "2022-03-20",
+      "status": false,
+      "tags": [
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "model": "list.task",
+    "pk": 5,
+    "fields": {
+      "content": "Go for a walk",
+      "date": "2022-03-14",
+      "deadline": "2022-03-14",
+      "status": false,
+      "tags": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "list.task",
+    "pk": 6,
+    "fields": {
+      "content": "Read book",
+      "date": "2022-03-15",
+      "deadline": "2022-03-17",
+      "status": false,
+      "tags": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "list.task",
+    "pk": 7,
+    "fields": {
+      "content": "Exercise",
+      "date": "2022-03-16",
+      "deadline": "2022-03-18",
+      "status": false,
+      "tags": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "list.task",
+    "pk": 8,
+    "fields": {
+      "content": "Write code",
+      "date": "2022-03-17",
+      "deadline": "2022-03-25",
+      "status": false,
+      "tags": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "list.task",
+    "pk": 9,
+    "fields": {
+      "content": "Practice guitar",
+      "date": "2022-03-18",
+      "deadline": "2022-03-20",
+      "status": false,
+      "tags": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "list.task",
+    "pk": 10,
+    "fields": {
+      "content": "Clean room",
+      "date": "2022-03-19",
+      "deadline": "2022-03-19",
+      "status": false,
+      "tags": [
+        11
+      ]
+    }
+  }
+]
