@@ -22,9 +22,3 @@ class TaskFormForCreate(forms.ModelForm):
     class Meta:
         model = Task
         fields = "__all__"
-
-
-# class TaskFormForUpdate(forms.ModelForm):
-#     class Meta:
-#         model = Task
-#         fields = "__all__"
