@@ -12,6 +12,7 @@ class TagForm(forms.ModelForm):
 class TaskForm(forms.ModelForm):
     status = forms.BooleanField(
         label="Complete?")
+
     class Meta:
         model = Task
         fields = ["status"]
